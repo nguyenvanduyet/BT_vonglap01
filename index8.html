@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+<button onclick="Game()">play/again</button>
+<script>
+    function Game() {
+        let a = parseInt(prompt('điểm đầu'));
+        let b = parseInt(prompt('điểm cuối'));
+        for (let i = 0; i < 3; i++) {
+            let c = parseInt(prompt('giá trị người dùng nhập'))
+            let rd = parseInt(Math.random() * (b - a) + a);
+            if (c == rd) {
+                alert('chúc mừng');
+                break;
+            } else if (c > rd){
+                alert('lớn hơn lựa chọn lại');
+                continue;
+            }else {
+                alert('nhỏ hơn bạn đã thua cuộc');
+            }
+        }
+    }
+</script>
+</body>
+</html>
